@@ -26,6 +26,10 @@ public class Cam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
 
         Vector3 offset = new Vector3();
         if (Input.GetKey("w") || Input.mousePosition.y >= Screen.height - EDGEPAN_SIZE)
